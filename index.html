@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud program</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/form-removebg-preview.png" type="image/x-icon">
+    
+</head>
+<body>
+    
+    <div class="mainnave">
+        <div class="logonave">
+            <img src="./images/form-removebg-preview.png" alt="" width="50%">
+        </div>
+        <div class="txt">
+          
+           
+
+        </div>
+
+      </div>
+      <section id="bgcolor">
+        <div class="h1txt">
+            <h1>CRUD WEB FORM</h1>
+            <p>Fill The Form ?</p>
+
+        </div>
+        <div class="form">
+            <div class="maindiv">
+                <div class="dive1">
+                    <label for="FirstName"> First Name</label><br>
+                    <input type="text" id="FirstName"  placeholder="Asan" required  ><br>
+                </div>
+                <div class="dive2">
+                    <label for="LastName"> Last Name</label><br>
+                    <input  type="text" id="LastName" placeholder="M" required ><br>
+                </div>
+            </div>
+           
+
+
+            <div class="dive3">
+                <label for="WorkEmail"> Work Email</label><br>
+                <input type="text" id="WorkEmail"  placeholder="name@example.com" required><br>
+            </div>
+
+
+
+            <div class="dive4">
+                <label for="Passward"> Passward:</label><br>  
+                <input type="password" id="Passward" placeholder="strongpassward" required><br>
+            </div>
+
+
+            <div class="dive5">
+                <label for="OrganizationName"> Organization Name</label> <br>
+                <input type="text" id="OrganizationName" placeholder="abc Organization" required><br>
+            </div>
+
+
+
+            <div class="dive6">
+                <label for="Sector">Organization Size</label><br>
+
+                <!-- <input type="text" id="Sector"><br> -->
+                <select id="Sector">
+                    <option selected></option>
+                    <option>50,000+ employee</option>
+                    <option>100,000+ employe</option>
+                    <option>150,000+ employe</option>
+                </select> 
+
+            </div>
+
+
+            <div class="dive7">
+                <label for="Industry"> Industry</label><br>
+
+                <!-- <input type="text" id="Industry"> <br> -->
+                <select id="Industry">
+                    <option selected></option>
+                    <option>Education</option>
+                    <option>Government</option>
+                    <option>Legal</option>
+                </select> 
+
+            </div>
+
+
+
+
+            <div class="dive8">
+                <p>Formstack has updated our Terms of Service effective January 4, 2023.
+                    We encourage you to read the document in its entirety.
+                    </p>
+    
+
+            </div>
+
+
+            <div class="check">
+                <!-- <input type="checkbox" name=" check" id="Checkbox">
+                <label for="check">I  understand and agree to the Formstack Privacy Policy, Software
+                     Services Agreement, and Acceptable Use Policy.
+                </label> -->
+
+
+                <input type="checkbox" id="Checkbox" name="check">
+                <label for="check">understand and agree to the Formstack Privacy Policy, Software
+                    Services Agreement, and Acceptable Use Policy.</label>
+            </div>
+
+
+
+
+            <div class="btn">
+                <button type="submit"  onclick="validate()" value="create">Submit</button>
+            </div>
+
+        </div>
+
+       
+
+    </section>
+
+<div class="maincolour">
+     <div class="gridlayout">
+        <div class="addingdatediv">
+            <!-- <label for="">FIRST NAME:</label><br>
+            <label for=""> LAST NAME:</label><br>
+            <label for=""> EMAIL ADDRES:</label><br>
+            <label for=""> ORGANIZATION NAME:</label><br>
+            <label for=""> ORGANIZATION SIZE:</label><br>
+            <label for=""> INDUSTRY:</label><br>            -->
+        </div>
+
+    </div>
+
+</div>
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    let name = document.querySelector("#FirstName");
+    let lastname = document.querySelector("#LastName");
+    let EMAILADDRES = document.querySelector("#WorkEmail");
+    let PHONENUMBERe = document.querySelector("#Passward");
+    let OrganizationName = document.querySelector("#OrganizationName");
+    let Organizationsize = document.querySelector("#Sector");
+    let industry = document.querySelector("#Industry");
+    let btn = document.querySelector(".btn");
+    let addingdatediv = document.querySelector(".addingdatediv");
+
+
+
+    btn.addEventListener("click",()=>{
+        let newdiv = document.createElement("div");
+        newdiv.classList.add("mainstyle")
+        addingdatediv.appendChild(newdiv);
+
+
+        let newinputname = document.createElement("input");
+        newinputname.value = FirstName.value
+        newinputname.setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputname);
+        newinputname.classList.add("namecss")
+
+
+        let newinputlastname = document.createElement("input");
+        newinputlastname.value = LastName.value
+        newinputlastname.setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputlastname);
+        newinputlastname.classList.add("namecss")
+
+
+
+        let newinputemail = document.createElement("input");
+        newinputemail.value = WorkEmail.value
+        newinputemail.setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputemail);
+        newinputemail.classList.add("namecss")
+
+
+        let newinputpassward = document.createElement("input");
+        newinputpassward .value = Passward.value
+        newinputpassward .setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputpassward);
+        newinputname.classList.add("namecss")
+        newinputpassward.classList.add("namecss")
+
+
+
+        let newinputorganationname = document.createElement("input");
+        newinputorganationname.value = OrganizationName.value
+        newinputorganationname.setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputorganationname);
+        newinputorganationname.classList.add("namecss")
+
+
+
+        let newinputorganationsize = document.createElement("input");
+        newinputorganationsize.value = Sector.value
+        newinputorganationsize.setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputorganationsize);
+        newinputorganationsize.classList.add("namecss")
+
+
+
+        
+        let newinputindustry = document.createElement("input");
+        newinputindustry.value = Industry.value
+        newinputindustry.setAttribute("readonly","readonly");
+        newdiv.appendChild(newinputindustry);
+        newinputindustry.classList.add("namecss")
+
+
+
+        
+        let delitbutton = document.createElement("button");
+        delitbutton.innerHTML=("Delete");
+        newdiv.appendChild(delitbutton)
+        delitbutton.classList.add("delitcss")
+
+        delitbutton.addEventListener("click",()=>{
+            newdiv.style.display="none";
+
+        })  
+        
+        
+
+        let editbutton = document.createElement("button");
+        editbutton.innerHTML=("Edit");
+        newdiv.appendChild(editbutton)
+        editbutton.classList.add("editcss")
+
+
+        editbutton.addEventListener("click",()=>{
+            newinputname.removeAttribute("readonly","readonly")
+            newinputlastname.removeAttribute("readonly","readonly")
+            newinputemail.removeAttribute("readonly","readonly")
+            newinputpassward.removeAttribute("readonly","readonly")
+            newinputorganationname.removeAttribute("readonly","readonly")
+            newinputorganationsize.removeAttribute("readonly","readonly")
+            newinputindustry.removeAttribute("readonly","readonly")
+
+        })
+
+
+        let savebutton = document.createElement("button");
+        savebutton.innerHTML=("Save");
+        newdiv.appendChild(savebutton)
+        savebutton.classList.add("savecss")
+
+        savebutton.addEventListener("click",()=>{
+            newinputname.setAttribute("readonly","readonly")
+            newinputlastname.setAttribute("readonly","readonly")
+            newinputemail.setAttribute("readonly","readonly")
+            newinputpassward.setAttribute("readonly","readonly")
+            newinputorganationname.setAttribute("readonly","readonly")
+            newinputorganationsize.setAttribute("readonly","readonly")
+            newinputindustry.setAttribute("readonly","readonly")
+
+        })
+
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
